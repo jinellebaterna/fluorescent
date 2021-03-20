@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import styles from "../App.module.scss";
 import ProductImages from "./ProductImages";
 import Sizes from "./Sizes";
 import Colours from "./Colours";
 
 const Product = ({ name, price, images, sizes, colors }) => {
-  const [selectedColor, setSelectedColor] = useState(null)
+  const [selectedColor, setSelectedColor] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
-      setSelectedColor(colors[0].name)
-    }, 50)
-  }, [])
+      setSelectedColor(colors[0].name);
+    }, 50);
+  }, []);
 
   return (
     <div className={styles.app}>
@@ -22,7 +22,11 @@ const Product = ({ name, price, images, sizes, colors }) => {
           <span className={styles.price}>{price}</span>
           <Sizes items={sizes} />
           <div className={styles.bar} />
-          <Colours items={colors} selectedColor={selectedColor} onSelect={setSelectedColor} />
+          <Colours
+            items={colors}
+            selectedColor={selectedColor}
+            onSelect={setSelectedColor}
+          />
           <div className={styles.addToCartContainer}>
             <p className={styles.addToCartText}>Add to Cart</p>
           </div>
@@ -30,6 +34,6 @@ const Product = ({ name, price, images, sizes, colors }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Product;

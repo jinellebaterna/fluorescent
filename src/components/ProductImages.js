@@ -9,7 +9,7 @@ const ProductImages = ({ items, selectedColor }) => {
     if (selectedImageRef.current !== null) {
       selectedImageRef.current.scrollIntoView();
     }
-  }, [selectedColor, selectedImageRef])
+  }, [selectedColor, selectedImageRef]);
 
   return (
     <div className={styles.productImages}>
