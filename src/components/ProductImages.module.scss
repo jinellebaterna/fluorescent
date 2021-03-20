@@ -1,7 +1,8 @@
-.imageContainer {
+.productImages {
   height: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   overflow: auto;
+  padding-right: 20px;
 }
