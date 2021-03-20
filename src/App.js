@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./App.module.scss";
-import redShoes from "./assets/redShoes.svg";
-import greenShoes from "./assets/greenShoes.svg";
-import blueShoes from "./assets/blueShoes.svg";
 import Colours from "./components/Colours";
 import Sizes from "./components/Sizes";
+import Product from "./components/Product";
+import redShoes from "../src/assets/redShoes.png";
+import greenShoes from "../src/assets/greenShoes.png";
+import blueShoes from "../src/assets/blueShoes.png";
 
 const App = () => {
   const colors = [
@@ -24,14 +25,12 @@ const App = () => {
 
   const sizes = ["Small", "Medium", "Large", "Extra Large"];
 
+  const images = [redShoes, greenShoes, blueShoes];
+
   return (
     <div className={styles.app}>
       <div className={styles.content}>
-        <div className={styles.imageContainer}>
-          <img className={styles.product} src={redShoes} alt="redShoes" />
-          <img className={styles.product} src={greenShoes} alt="greenShoes" />
-          <img className={styles.product} src={blueShoes} alt="blueShoes" />
-        </div>
+        <Product items={images} />
         <div className={styles.productDetails}>
           <span className={styles.name}>Red Flyknit Trainers</span>
           <span className={styles.price}>$190.00</span>
