@@ -8,7 +8,9 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     max-width: 1440px;
     width: 100%;
     overflow: hidden;
@@ -16,7 +18,7 @@
     .productDetails {
       display: flex;
       flex-direction: column;
-      margin-left: 60px;
+      margin: 0 60px;
       flex: 0;
       min-width: 360px;
 
@@ -39,7 +41,7 @@
       }
 
       .bar {
-        border: 1px solid #DFDFDF;
+        border-bottom: 1px solid #DFDFDF;
         margin: 20px 0;
       }
 
