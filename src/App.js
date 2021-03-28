@@ -6,13 +6,13 @@ import Product from "./components/Product";
 
 const App = () => {
   const product = {
-    name: 'Red Flyknit Trainers',
-    price: '$190.00',
-    sizes:  ["Small", "Medium", "Large", "Extra Large"],
+    name: "Red Flyknit Trainers",
+    price: "$190.00",
+    sizes: ["Small", "Medium", "Large", "Extra Large"],
     images: [
-      { image: redShoes, color: 'red' },
-      { image: greenShoes, color: 'green' },
-      { image: blueShoes, color: 'blue' },
+      { image: redShoes, color: "red" },
+      { image: greenShoes, color: "green" },
+      { image: blueShoes, color: "blue" }
     ],
     colors: [
       {
@@ -31,9 +31,9 @@ const App = () => {
         color2: "#416CAC"
       }
     ]
-  }
+  };
 
-  return <Product {...product} />
+  return <Product {...product} />;
 };
 
 export default App;
