@@ -8,7 +8,3 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   color: #1d1d1d;
 }
-
-html, body, #root {
-  height: 100%;
-}

@@ -7,7 +7,8 @@ const ProductImage = ({ image, color }, ref) => {
   useImperativeHandle(ref, () => ({
     scrollIntoView: () => {
       const target = divRef.current;
-      target.parentNode.scroll({top: target.offsetTop - 40, behavior: 'smooth'});
+      // target.parentNode.scroll({top: target.offsetTop - 40, behavior: 'smooth'});
+      target.scrollIntoView({ behavior: 'smooth'})
     }
   }));
 

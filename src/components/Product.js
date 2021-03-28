@@ -17,18 +17,20 @@ const Product = ({ name, price, images, sizes, colors }) => {
     <div className={styles.app}>
       <div className={styles.content}>
         <ProductImages items={images} selectedColor={selectedColor} />
-        <div className={styles.productDetails}>
-          <span className={styles.name}>{name}</span>
-          <span className={styles.price}>{price}</span>
-          <Sizes items={sizes} />
-          <div className={styles.bar} />
-          <Colours
-            items={colors}
-            selectedColor={selectedColor}
-            onSelect={setSelectedColor}
-          />
-          <div className={styles.addToCartContainer}>
-            <p className={styles.addToCartText}>Add to Cart</p>
+        <div className={styles.productDetailsContainer}>
+          <div className={styles.productDetails}>
+            <span className={styles.name}>{name}</span>
+            <span className={styles.price}>{price}</span>
+            <Sizes items={sizes} />
+            <div className={styles.bar} />
+            <Colours
+              items={colors}
+              selectedColor={selectedColor}
+              onSelect={setSelectedColor}
+            />
+            <div className={styles.addToCartContainer}>
+              <p className={styles.addToCartText}>Add to Cart</p>
+            </div>
           </div>
         </div>
       </div>

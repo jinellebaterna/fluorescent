@@ -5,7 +5,7 @@ import Size from "./Size";
 const Sizes = ({ items }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <div>
+    <div className={styles.sizesContainer}>
       <span className={styles.sizeText}>Size</span>
       <div className={styles.sizes}>
         {items.map((size, index) => (

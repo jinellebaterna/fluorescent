@@ -1,12 +1,16 @@
-.sizeText {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 28px;
-}
+.sizesContainer {
+  margin-top: 40px;
 
-.sizes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  .sizeText {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .sizes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

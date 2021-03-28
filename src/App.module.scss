@@ -1,11 +1,9 @@
 .app {
   display: flex;
-  height: 100%;
   flex-direction: row;
   justify-content: center;
 
   .content {
-    height: 100%;
     display: flex;
     justify-content: center;
     padding-top: 40px;
@@ -15,49 +13,58 @@
     width: 100%;
     overflow: hidden;
 
-    .productDetails {
+    .productDetailsContainer {
       display: flex;
       flex-direction: column;
       margin: 0 60px;
       flex: 0;
       min-width: 360px;
 
-      .name {
-        display: flex;
-        align-items: center;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 32px;
-        margin-top: 40px;
-      }
+      .productDetails {
+        position: fixed;
 
-      .price {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 40px;
-      }
+        .name {
+          display: flex;
+          align-items: center;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 32px;
+          margin-top: 40px;
+        }
 
-      .bar {
-        border-bottom: 1px solid #DFDFDF;
-        margin: 20px 0;
-      }
-
-      .addToCartContainer {
-        background-color: white;
-        border: 1px solid #dfdfdf;
-        box-sizing: border-box;
-        border-radius: 28px;
-
-        .addToCartText {
-          padding: 12px;
-          text-align: center;
+        .price {
           font-style: normal;
           font-weight: normal;
           font-size: 14px;
           line-height: 24px;
+        }
+
+        .bar {
+          border-bottom: 1px solid #dfdfdf;
+          margin: 20px 0;
+        }
+
+        .addToCartContainer {
+          background-color: white;
+          border: 1px solid #dfdfdf;
+          box-sizing: border-box;
+          border-radius: 28px;
+          cursor: pointer;
+
+          .addToCartText {
+            padding: 12px;
+            text-align: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+          }
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
         }
       }
     }
