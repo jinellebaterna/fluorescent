@@ -4,7 +4,7 @@ import cx from "classnames";
 
 const Size = ({ name, isSelected, onSelect }) => {
   return (
-    <button id='size'
+    <button type='button'
       className={cx(styles.size, {
         [styles.selected]: isSelected
       })}

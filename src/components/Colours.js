@@ -8,7 +8,7 @@ const Colours = ({items, selectedColor, onSelect}) => {
       <label className={styles.colourText}>Colour</label>
       <div className={styles.colours}>
         {items.map(({ name, color1, color2}) => (
-          <Colour color1={color1} color2={color2} onSelect={() => {
+          <Colour name={name} color1={color1} color2={color2} onSelect={() => {
             onSelect(name)
           }} isSelected={selectedColor === name} />
         ))}

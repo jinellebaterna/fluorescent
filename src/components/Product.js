@@ -28,9 +28,8 @@ const Product = ({ name, price, images, sizes, colors }) => {
               selectedColor={selectedColor}
               onSelect={setSelectedColor}
             />
-            <button className={styles.addToCartContainer}>
+            <button type='button' className={styles.addToCartContainer}>
               Add to Cart
-              {/*<p className={styles.addToCartText}>Add to Cart</p>*/}
             </button>
           </div>
         </section>
