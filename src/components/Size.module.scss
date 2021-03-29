@@ -12,6 +12,11 @@
   margin-top: 10px;
   cursor: pointer;
 
+  &:hover {
+    background-color: dimgray;
+    color: white;
+  }
+
   &.selected {
     background-color: #1d1d1d;
     color: white;
