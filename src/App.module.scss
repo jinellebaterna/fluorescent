@@ -52,15 +52,13 @@
           box-sizing: border-box;
           border-radius: 28px;
           cursor: pointer;
-
-          .addToCartText {
-            padding: 12px;
-            text-align: center;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-          }
+          width: 100%;
+          padding: 12px;
+          text-align: center;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
 
           &:hover {
             background-color: black;

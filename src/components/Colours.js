@@ -5,7 +5,7 @@ import Colour from "./Colour";
 const Colours = ({items, selectedColor, onSelect}) => {
   return (
     <section>
-      <span className={styles.colourText}>Colour</span>
+      <label className={styles.colourText}>Colour</label>
       <div className={styles.colours}>
         {items.map(({ name, color1, color2}) => (
           <Colour color1={color1} color2={color2} onSelect={() => {

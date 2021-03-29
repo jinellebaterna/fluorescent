@@ -12,13 +12,13 @@ const Colour = ({ color1, color2, isSelected, onSelect }) => {
   };
 
   return (
-    <div className={cx(styles.colour, {
+    <button className={cx(styles.colour, {
       [styles.selected]: isSelected
     })} onClick={onSelect}>
       <div className={styles.colour1} style={bgColor1}>
         <div className={styles.colour2} style={bgColor2} />
       </div>
-    </div>
+    </button>
   );
 };
 

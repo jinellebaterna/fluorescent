@@ -18,8 +18,8 @@ const Product = ({ name, price, images, sizes, colors }) => {
       <section id='content' className={styles.content}>
         <ProductImages items={images} selectedColor={selectedColor} />
         <section id='productDetailsContainer' className={styles.productDetailsContainer}>
-          <aside id='productDetails' className={styles.productDetails}>
-            <span className={styles.name}>{name}</span>
+          <div className={styles.productDetails}>
+            <title className={styles.name}>{name}</title>
             <span className={styles.price}>{price}</span>
             <Sizes items={sizes} />
             <div className={styles.bar} />
@@ -28,10 +28,11 @@ const Product = ({ name, price, images, sizes, colors }) => {
               selectedColor={selectedColor}
               onSelect={setSelectedColor}
             />
-            <div className={styles.addToCartContainer}>
-              <p className={styles.addToCartText}>Add to Cart</p>
-            </div>
-          </aside>
+            <button className={styles.addToCartContainer}>
+              Add to Cart
+              {/*<p className={styles.addToCartText}>Add to Cart</p>*/}
+            </button>
+          </div>
         </section>
       </section>
     </main>

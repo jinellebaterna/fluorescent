@@ -6,8 +6,8 @@ const Sizes = ({ items }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <section id='sizesContainer' className={styles.sizesContainer}>
-      <h6 className={styles.sizeText}>Size</h6>
-      <aside id='sizes' className={styles.sizes}>
+      <label className={styles.sizeText}>Size</label>
+      <div id='sizes' className={styles.sizes}>
         {items.map((size, index) => (
           <Size
             name={size}
@@ -15,7 +15,7 @@ const Sizes = ({ items }) => {
             onSelect={() => setSelectedIndex(index)}
           />
         ))}
-      </aside>
+      </div>
     </section>
   );
 };
