@@ -13,12 +13,12 @@ const ProductImage = ({ image, color }, ref) => {
   }));
 
   return (
-    <div className={styles.productImage} ref={divRef}>
-      <div className={styles.magnify}>
-        <img src={magnify}/>
-      </div>
+    <section className={styles.productImage} ref={divRef}>
+      <figure className={styles.magnify}>
+        <img src={magnify} alt="magnify"/>
+      </figure>
       <img className={styles.image} src={image} alt="shoes" />
-    </div>
+    </section>
   );
 };
 

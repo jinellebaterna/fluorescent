@@ -4,14 +4,14 @@ import cx from "classnames";
 
 const Size = ({ name, isSelected, onSelect }) => {
   return (
-    <div
+    <section id='size'
       className={cx(styles.size, {
         [styles.selected]: isSelected
       })}
       onClick={onSelect}
     >
       {name}
-    </div>
+    </section>
   );
 };
 

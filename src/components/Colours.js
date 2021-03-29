@@ -4,7 +4,7 @@ import Colour from "./Colour";
 
 const Colours = ({items, selectedColor, onSelect}) => {
   return (
-    <div>
+    <section>
       <span className={styles.colourText}>Colour</span>
       <div className={styles.colours}>
         {items.map(({ name, color1, color2}) => (
@@ -13,7 +13,7 @@ const Colours = ({items, selectedColor, onSelect}) => {
           }} isSelected={selectedColor === name} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

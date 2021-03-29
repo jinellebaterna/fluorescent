@@ -5,9 +5,9 @@ import Size from "./Size";
 const Sizes = ({ items }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <div className={styles.sizesContainer}>
-      <span className={styles.sizeText}>Size</span>
-      <div className={styles.sizes}>
+    <section id='sizesContainer' className={styles.sizesContainer}>
+      <h6 className={styles.sizeText}>Size</h6>
+      <aside id='sizes' className={styles.sizes}>
         {items.map((size, index) => (
           <Size
             name={size}
@@ -15,8 +15,8 @@ const Sizes = ({ items }) => {
             onSelect={() => setSelectedIndex(index)}
           />
         ))}
-      </div>
-    </div>
+      </aside>
+    </section>
   );
 };
 

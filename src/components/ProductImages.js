@@ -12,7 +12,7 @@ const ProductImages = ({ items, selectedColor }) => {
   }, [selectedColor, selectedImageRef]);
 
   return (
-    <div className={styles.productImages}>
+    <section className={styles.productImages}>
       {items.map(({ color, image }) => (
         <ProductImage
           ref={color === selectedColor ? selectedImageRef : null}
@@ -20,7 +20,7 @@ const ProductImages = ({ items, selectedColor }) => {
           image={image}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

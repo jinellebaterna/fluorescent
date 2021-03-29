@@ -14,11 +14,11 @@ const Product = ({ name, price, images, sizes, colors }) => {
   }, []);
 
   return (
-    <div className={styles.app}>
-      <div className={styles.content}>
+    <main role='main' className={styles.app}>
+      <section id='content' className={styles.content}>
         <ProductImages items={images} selectedColor={selectedColor} />
-        <div className={styles.productDetailsContainer}>
-          <div className={styles.productDetails}>
+        <section id='productDetailsContainer' className={styles.productDetailsContainer}>
+          <aside id='productDetails' className={styles.productDetails}>
             <span className={styles.name}>{name}</span>
             <span className={styles.price}>{price}</span>
             <Sizes items={sizes} />
@@ -31,10 +31,10 @@ const Product = ({ name, price, images, sizes, colors }) => {
             <div className={styles.addToCartContainer}>
               <p className={styles.addToCartText}>Add to Cart</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </aside>
+        </section>
+      </section>
+    </main>
   );
 };
 
