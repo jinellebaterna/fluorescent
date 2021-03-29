@@ -63,6 +63,11 @@
           &:hover {
             background-color: black;
             color: white;
+            outline: transparent;
+          }
+
+          &.selected {
+            outline: transparent;
           }
         }
       }

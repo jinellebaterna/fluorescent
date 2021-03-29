@@ -16,11 +16,13 @@
   &:hover {
     background-color: #838484;
     color: black;
+    outline: transparent;
   }
 
   &.selected {
     background-color: #1d1d1d;
     color: white;
+    outline: transparent;
   }
 }
 
