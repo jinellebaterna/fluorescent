@@ -1,25 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "./ProductImages.module.scss";
 import ProductImage from "./ProductImage";
 
 const ProductImages = ({ items, selectedColor }) => {
-  const selectedImageRef = useRef(null);
-
-  useEffect(() => {
-    if (selectedImageRef.current !== null) {
-      selectedImageRef.current.scrollIntoView();
-    }
-  }, [selectedColor, selectedImageRef]);
+  let item = items.find(item => item.color === selectedColor);
 
   return (
     <section className={styles.productImages}>
-      {items.map(({ color, image }) => (
-        <ProductImage
-          ref={color === selectedColor ? selectedImageRef : null}
-          color={color}
-          image={image}
-        />
-      ))}
+      <ProductImage color={item.color} image={item.image} />
     </section>
   );
 };

@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../App.module.scss";
 import ProductImages from "./ProductImages";
 import Sizes from "./Sizes";
 import Colours from "./Colours";
 
 const Product = ({ name, price, images, sizes, colors }) => {
-  const [selectedColor, setSelectedColor] = useState(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSelectedColor(colors[0].name);
-    }, 50);
-  }, []);
+  const [selectedColor, setSelectedColor] = useState(colors[0].name);
 
   return (
     <main role='main' className={styles.app}>

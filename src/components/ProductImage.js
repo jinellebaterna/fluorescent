@@ -1,25 +1,16 @@
-import React, { useImperativeHandle, useRef, forwardRef } from "react";
+import React from "react";
 import styles from "./ProductImage.module.scss";
-import magnify from '../assets/magnify.svg';
+import magnify from "../assets/magnify.svg";
 
-const ProductImage = ({ image, color }, ref) => {
-  const divRef = useRef(null);
-  useImperativeHandle(ref, () => ({
-    scrollIntoView: () => {
-      const target = divRef.current;
-      // target.parentNode.scroll({top: target.offsetTop - 40, behavior: 'smooth'});
-      target.scrollIntoView({ behavior: 'smooth'})
-    }
-  }));
-
+const ProductImage = ({ image }) => {
   return (
-    <section className={styles.productImage} ref={divRef}>
+    <section className={styles.productImage}>
       <figure className={styles.magnify}>
-        <img src={magnify} alt="magnify"/>
+        <img src={magnify} alt="magnify" />
       </figure>
       <img className={styles.image} src={image} alt="shoes" />
     </section>
   );
 };
 
-export default forwardRef(ProductImage);
+export default ProductImage;
